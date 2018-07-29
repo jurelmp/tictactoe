@@ -1,20 +1,12 @@
-{% load staticfiles %}
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static 'player/style.css' %}">
-</head>
-<body>
-<h1>Welcome, {{ user.username }}</h1>
-These are you active games:
+{% block content %}
+    <h1>Welcome, {{ user.username }}</h1>
+    These are you active games:
 
-<ul>
-    {% for g in games %}
-        <li>Game {{ g.id }}: {{ g.first_player }} vs {{ g.second_player }}</li>
-    {% endfor %}
-</ul>
-</body>
-</html>
+    <ul>
+        {% for g in games %}
+            <li>Game {{ g.id }}: {{ g.first_player }} vs {{ g.second_player }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
