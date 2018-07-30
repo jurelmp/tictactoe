@@ -2,7 +2,7 @@
 
 {% block title %}
     Player Login
-{% endblock %}
+{% endblock title %}
 
 {% block content %}
     <form role="form" method="post" action="{% url 'player_login' %}">
@@ -11,4 +11,4 @@
         {{ form }}
         <button type="submit" class="btn btn-success">Sign In</button>
     </form>
-{% endblock %}
+{% endblock content %}
