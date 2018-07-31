@@ -10,8 +10,8 @@
         <blockquote><p>{{ invitation.message }}</p></blockquote>
         <form method="post" action="{% url 'player_accept_invitation' id=invitation.id %}">
             {% csrf_token %}
-            <button type="submit" name="accept" value="ok">Accept</button>
-            <button type="submit" name="deny" value="no">Deny</button>
+            <button class="btn btn-success" type="submit" name="accept" value="ok">Accept</button>
+            <button class="btn btn-danger" type="submit" name="deny" value="no">Deny</button>
         </form>
     </div>
 {% endblock content %}
